@@ -1,0 +1,51 @@
+.movie-detail-container {
+  height: 80vh;
+}
+
+.moviedetail-row {
+  font-family: "Open Sans", serif;
+  font-size: 13px;
+  color: #c4c4c4;
+  padding: 10px 0;
+  background-color: #282b36;
+  border-radius: 3px;
+}
+.moviedetail-img img {
+  height: 350px;
+  object-fit: cover;
+}
+.md-name {
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+}
+.md-type {
+  border: 1px solid #e4166e;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+.md-rating {
+  color: #ecae04;
+}
+.md-down-name {
+  font-size: 13px;
+}
+.md-overview {
+  color: #c4c4c4;
+}
+.md-overview-des {
+  text-align: justify;
+}
+.md-title {
+  color: #fff;
+}
+@media screen and (max-width: 990px) {
+  .moviedetail-img img {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .movie-detail-container {
+    height: auto;
+  }
+}

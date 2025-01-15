@@ -1,0 +1,110 @@
+.loading-logo img {
+  object-fit: cover;
+  height: 80px;
+}
+.loading-container {
+  color: #aaaaaa;
+  margin-top: 190px;
+}
+.movie-container,
+.movie-detail-container {
+  margin-top: 70px;
+}
+@media screen and (max-width: 1024px) {
+  .movie-container,
+  .movie-detail-container {
+    margin-top: 50px;
+  }
+}
+.col-lg-2-4 {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+.movie-card {
+  height: 400px;
+  background-color: #292c34;
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 13px;
+}
+.movie-img {
+  height: 70%;
+  cursor: pointer;
+  filter: brightness(1);
+  transition: all ease-in 0.2s;
+}
+.movie-img:hover {
+  filter: brightness(0.7);
+}
+.movie-main-detail {
+  height: 30%;
+  cursor: default;
+}
+.movie-year {
+  color: #aaaaaa;
+}
+.movie-name {
+  color: #fff;
+  height: 50px;
+  transition: all ease-in 0.2s;
+  overflow: hidden;
+}
+.movie-name:hover {
+  color: #ea1277;
+}
+.movie-more {
+  background-color: #3f4655;
+  width: 90%;
+  padding: 5px 3px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease-in 0.2s;
+  cursor: pointer;
+}
+.movie-more:hover {
+  background-color: #51596c;
+}
+.movie-more-icon {
+  background: #51596c;
+  margin: 0 10px;
+  border-radius: 3px;
+  padding: 3px 5px;
+  font-size: 9px;
+}
+
+@media screen and (max-width: 768px) {
+  .movie-card {
+    height: 300px;
+  }
+  .movie-name {
+    height: 25px;
+  }
+  .movie-more {
+    width: 80%;
+    padding: 1px 3px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .movie-card {
+    height: 250px;
+  }
+  .movie-name {
+    height: 20px;
+  }
+  .movie-more {
+    width: 80%;
+    padding: 1px 3px;
+  }
+}
+.errormsg {
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-top: 40px;
+}
