@@ -24,7 +24,11 @@ export default function Navbar() {
     };
   }, [prevScrollPosition]);
 
-  const { query, setQuery } = useGlobalContext();
+  const { query, setQuery, setCurrentPage } = useGlobalContext();
+  const handleinput = (e) => {
+    setQuery(e.target.value);
+    setCurrentPage(1);
+  };
   return (
     <div
       className={`container-fluid  d-flex align-items-center justify-content-center navbar-container ${
@@ -50,7 +54,7 @@ export default function Navbar() {
             >
               <input
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={handleinput}
                 type="text"
                 className="search-input"
                 placeholder="Enter keywords..."

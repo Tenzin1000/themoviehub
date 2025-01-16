@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "../css/movie.css";
 import loadinglogo from "../img/logo192.png";
 export default function Movie() {
-  const { movie, error, isLoading } = useGlobalContext();
+  const { movie, error, isLoading, query } = useGlobalContext();
   const navigate = useNavigate();
   console.log(isLoading);
   return (
@@ -17,22 +17,26 @@ export default function Movie() {
           <div className="loading-text ms-3">Loading......</div>
         </div>
       ) : (
-        <div className="row w-90 mx-auto">
+        <div className="row mx-auto">
+          <div className="text-white fs-4 fw-bold">
+            Search results for "{query}"
+          </div>
+
           {error.show ? (
             <p className="errormsg">{error.msg}</p>
           ) : (
-            movie.map((curMovie, index) => {
-              const { imdbID, Title, Poster, Year } = curMovie;
+            movie.slice(0, 10).map((curMovie, index) => {
+              const { imdbID, Title, Poster: originalPoster, Year } = curMovie;
+              // Check if Poster is "N/A" and replace it with loadinglogo
+              const Poster =
+                originalPoster === "N/A" ? loadinglogo : originalPoster;
               const handleClick = () => {
                 navigate(`/movie/${imdbID}`);
               };
               const movieName = Title.substring(0, 20);
               return (
-                <div
-                  className="col-4 col-md-4 col-lg-2 px-1 px-md-2 py-0 "
-                  key={index}
-                >
-                  <div className="movie-card  my-1 my-sm-2">
+                <div className="col-6 col-md-2-4 px-2 " key={index}>
+                  <div className="movie-card  my-2">
                     <div
                       className="movie-img"
                       style={{

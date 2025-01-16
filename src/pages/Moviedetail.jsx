@@ -4,7 +4,7 @@ import { NavLink, useParams } from "react-router-dom";
 import loadinglogo from "../img/logo192.png";
 
 import "../css/moviedetail.css";
-const Detail_url = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API}`;
+const Detail_url = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API}`;
 
 export default function Moviedetail() {
   const { id } = useParams();
@@ -119,6 +119,12 @@ export default function Moviedetail() {
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="col-12 md-back-container my-2 text-center text-capitalize ">
+              <NavLink to="/" className="btn btn-primary fs-6">
+                <i className="fa-solid fa-arrow-left me-2"></i>
+                back to the main page
+              </NavLink>
             </div>
           </div>
         )}

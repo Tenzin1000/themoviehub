@@ -24,6 +24,7 @@ const AppProvider = ({ children }) => {
           show: false,
           msg: "",
         });
+        setTotalResults(data.totalResults);
         setIsLoading(false);
       } else {
         setMovie([]);
@@ -41,14 +42,26 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     let timerOut = setTimeout(() => {
-      getmovies(`${API_url}&s=${query}`);
+      getmovies(`${API_url}&s=${query}&page=${currentPage}`);
     }, 500);
     return () => {
       clearTimeout(timerOut);
     };
-  }, [query]);
+  }, [query, currentPage]);
   return (
-    <AppContext.Provider value={{ isLoading, movie, error, query, setQuery }}>
+    <AppContext.Provider
+      value={{
+        isLoading,
+        movie,
+        error,
+        query,
+        setQuery,
+        totalResults,
+        setTotalResults,
+        currentPage,
+        setCurrentPage,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

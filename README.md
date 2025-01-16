@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# MovieHub 🎥
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**MovieHub** is a **React-based movie application** that allows users to search for movies, view details, and paginate through results using the **OMDB API**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+### Challenges 🚀
 
-### `npm start`
+1.Loading logo while fetching data.
+2.Search functionality that updates as the user's types for a movie.
+3.About more for individual sets of movies so that the users and go to single movie list for more information.
+4.agination for nativating through search results.
+5.Responsive design by using Bootstrap CDN and media quries.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### To Run The Movie Hub app locally. You will need to follow the following steps.
 
-### `npm test`
+##### Ensure you have the following installed:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.Node.js (LTS version recommended)
+2.npm or yarn for managing dependencies.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Steps Instructions 🛠️
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##### 1.Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/Tenzin1000/themoviehub.git
+cd moviehub
+```
 
-### `npm run eject`
+##### 2.Install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm install
+# or
+yarn install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##### 3.Get an OMDB API Key:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+a.Visit the OMDB API website and sign up for a free account.
+b.After signing up, you'll receive an API key. Keep it handy for the next step.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+##### 4.Create a .env file in the root directory:
 
-## Learn More
+a.Add the following line to your .env file, replacing YOUR_API_KEY with your actual OMDB API key:
+REACT_APP_API=YOUR_API_KEY
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+##### 5.Start the development server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
 
-### Code Splitting
+# or
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+yarn start
+```
 
-### Analyzing the Bundle Size
+Open your browser and navigate to http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+### Folder Structure 📂
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+moviehub/
+├── public/
+├── src/
+│ ├── components/
+│ ├── context/
+| ├── css/  
+| ├── img/  
+│ ├── pages/
+│ ├── App.js
+│ ├── index.js
+├── .env
+├── package.json
+└── README.md
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Scripts 📜
 
-### Deployment
+##### 1.Start Development Server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npm start
+```
 
-### `npm run build` fails to minify
+##### 2.Build for Production:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm run build
+```
+
+##### 3.Run Tests:
+
+```bash
+npm test
+```
+
+---
+
+### Notes 📝
+
+1.Use the correct API_key from OMDB.
+2.Before running the app make sure you add **.env ** with REACT_APP_API=YOUR_API_KEY.
+
+---
+
+### License 📄
+
+This project is licensed under the MIT License. Feel free to use and modify it as you like
+
+---
