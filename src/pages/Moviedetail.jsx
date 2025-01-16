@@ -4,6 +4,7 @@ import { NavLink, useParams } from "react-router-dom";
 import loadinglogo from "../img/logo192.png";
 
 import "../css/moviedetail.css";
+import About from "../components/About";
 const Detail_url = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API}`;
 
 export default function Moviedetail() {
@@ -28,7 +29,7 @@ export default function Moviedetail() {
   }, []);
   const {
     Title,
-    Poster,
+    Poster: originalPoster,
     Released,
     Runtime,
     Genre,
@@ -41,6 +42,8 @@ export default function Moviedetail() {
     Type,
     Writer,
   } = singleMovie;
+  // Check if Poster is "N/A" and replace it with loadinglogo
+  const Poster = originalPoster === "N/A" ? loadinglogo : originalPoster;
   return (
     <>
       <div className="container-fluid  d-flex align-items-center justify-content-center navbar-container fixed">
@@ -67,7 +70,7 @@ export default function Moviedetail() {
           </div>
         ) : (
           <div className="row moviedetail-row mx-auto ">
-            <div className="moviedetail-img col-md-4 col-12 d-flex align-items-center justify-content-md-end">
+            <div className="moviedetail-img mb-3 mb-md-0 col-md-4 col-12 d-flex align-items-center justify-content-md-end">
               <img src={Poster} alt={Title} />
             </div>
             <div className="moviedetail-des col-md-8 col-12 d-flex flex-column align-items-start justify-content-center  ">
@@ -129,6 +132,7 @@ export default function Moviedetail() {
           </div>
         )}
       </div>
+      <About />
     </>
   );
 }

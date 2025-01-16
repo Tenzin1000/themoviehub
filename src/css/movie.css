@@ -22,9 +22,7 @@
     margin-top: 50px;
   }
 }
-.movie-container .row {
-  width: 85%;
-}
+
 .movie-card {
   height: 360px;
   background-color: #292c34;

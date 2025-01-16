@@ -1,0 +1,20 @@
+.about-container {
+  color: #aaaaaa;
+  background-color: #2f3441;
+  padding: 20px 0;
+}
+.about-container .row {
+  width: 80%;
+}
+.about-left img {
+  height: 90px;
+}
+.about-right {
+  text-align: justify;
+  font-size: 13px;
+}
+@media screen and (max-width: 880px) {
+  .about-container .row {
+    width: 90%;
+  }
+}
